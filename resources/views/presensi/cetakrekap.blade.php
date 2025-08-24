@@ -50,9 +50,9 @@
                     <span id="title">
                         REKAP PRESENSI PEGAWAI<br>
                         PERIODE {{ strtoupper($namabulan[$bulan]) }} {{ $tahun }}<br>
-                        SMK NEGERI 1 LANGSA<br>
+                        SMK NEGERI 4 LANGSA<br>
                     </span>
-                    <span><i>Jl. Syiah Kuala Lr. Peutua Luwi, Tualang Teungoh, Kec. Langsa Kota, Kota Langsa, Provinsi Aceh</i></span>
+                    <span><i>Jl. Istiqamah, No. 12, Alue Dua, Langsa Baro, 24415, Alue Dua, Kec. Langsa Baro, Kota Langsa, Aceh 24452</i></span>
                 </td>
             </tr>
         </table>
@@ -130,15 +130,15 @@
             <tr>
                 <td></td>
                 <td style="text-align: center">Langsa, {{ formatTanggalIndonesia(date('Y-m-d')) }}<br>
-                    Kepala SMKN 3 Langsa</td>
+                    Kepala SMKN 2 Langsa</td>
             </tr>
             <tr>
                 <td style="text-align: left; vertical-align:bottom" height="100px">
                     <br><br><br>Rekapan ini sesuai dengan bukti dukung terlampir
                 </td>
                 <td style="text-align: center; vertical-align:bottom">
-                    <b>Siti Sahpura, S.Pd</b><br>
-                    NIP. 197704272006042004
+                    <b>Rusli, S.Pd</b><br>
+                    NIP. 196710281989011001
                 </td>
             </tr>
         </table>

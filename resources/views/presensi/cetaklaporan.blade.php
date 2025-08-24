@@ -71,9 +71,9 @@
                     <span id="title">
                         LAPORAN PRESENSI PEGAWAI<br>
                         PERIODE {{ strtoupper($namabulan[$bulan]) }} {{ $tahun }}<br>
-                        SMK NEGERI 1 LANGSA<br>
+                        SMK NEGERI 4 LANGSA<br>
                     </span>
-                    <span><i>Jl. Syiah Kuala Lr. Peutua Luwi, Tualang Teungoh, Kec. Langsa Kota, Kota Langsa, Provinsi Aceh</i></span>
+                    <span><i>Jl. Istiqamah, No. 12, Alue Dua, Langsa Baro, 24415, Alue Dua, Kec. Langsa Baro, Kota Langsa, Aceh 24452</i></span>
                 </td>
             </tr>
         </table>
@@ -159,8 +159,8 @@
                 <td colspan="2" style="text-align: left">
                     Mengetahui,<br>
                     Kepala Sekolah<br><br><br><br>
-                    <u>Siti Sahpura, S.Pd.</u><br>
-                    NIP. 197704272006042004
+                    <u>Rusli, S.Pd.</u><br>
+                    NIP. 196710281989011001
                 </td>
                 <td></td>
                 <td></td>
