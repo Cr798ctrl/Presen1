@@ -91,9 +91,9 @@
                     <span id="title">
                         LAPORAN PRESENSI KARYAWAN<br>
                         PERIODE {{ strtoupper($namabulan[$bulan]) }} {{ $tahun }}<br>
-                        PT. ADAM ADIFA<br>
+                      SMK NEGERI 1 LANGSA<br>
                     </span>
-                    <span><i>Jln. H. Dahlan No. 75, Kecamatan Sindangrasa, Kabupaten Ciamis</i></span>
+                    <span><i>Jl. Syiah Kuala Lr. Peutua Luwi, Tualang Teungoh, Kec. Langsa Kota, Kota Langsa, Provinsi Aceh</i></span>
                 </td>
             </tr>
         </table>
