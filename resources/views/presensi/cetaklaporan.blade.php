@@ -64,15 +64,16 @@
         <table style="width: 100%">
             <tr>
                 <td style="width: 30px">
-                    <img src="{{ asset('assets/img/OIP.jfif') }}" width="70" height="83" alt="">
+                    <!-- Mengganti nama file gambar logo -->
+                    <img src="{{ asset('assets/img/logopresensi.png') }}" width="70" height="83" alt="">
                 </td>
                 <td>
                     <span id="title">
                         LAPORAN PRESENSI PEGAWAI<br>
                         PERIODE {{ strtoupper($namabulan[$bulan]) }} {{ $tahun }}<br>
-                        SMK Negeri 2 Langsa<br>
+                        SMK Negeri 3 Langsa<br>
                     </span>
-                    <span><i>Jl. A. Yani, Kecamatan Langsa Baro, Kota Langsa, Aceh.</i></span>
+                    <span><i>Jl. R.A. Kartini No. 9 B, Paya Bujok Seuleumak, Kec. Langsa Baro, Kota Langsa, Aceh.</i></span>
                 </td>
             </tr>
         </table>
@@ -86,14 +87,14 @@
                 </td>
             </tr>
             <tr>
-                <td>NIP/NPPPK</td>
-                <td>:</td>
-                <td>{{ $karyawan->nik }}</td>
-            </tr>
-            <tr>
                 <td>Nama Pegawai</td>
                 <td>:</td>
                 <td>{{ $karyawan->nama_lengkap }}</td>
+            </tr>
+            <tr>
+                <td>NIP/NPPPK</td>
+                <td>:</td>
+                <td>{{ $karyawan->nik }}</td>
             </tr>
             <tr>
                 <td>Jabatan</td>
@@ -113,78 +114,57 @@
                 <th>Keterangan</th>
             </tr>
 
-             @foreach ($presensi as $d)
+            @foreach ($presensi as $d)
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align: center">{{ $loop->iteration }}</td>
                     <td>{{ \Carbon\Carbon::parse($d->tgl_presensi)->translatedFormat('d F Y') }}</td>
                     <td>{{ $d->jam_in }}</td>
                     <td><img src="{{ url(Storage::url('uploads/absensi/' . $d->foto_in)) }}" alt="" class="foto"></td>
                     <td>{{ $d->jam_out ?? 'Belum Absen' }}</td>
                     <td><img src="{{ $d->jam_out ? url(Storage::url('uploads/absensi/' . $d->foto_out)) : asset('assets/img/camera.jpg') }}" alt="" class="foto"></td>
                     <td style="text-align: center">{{ $d->status }}</td>
-                    <td>{{ $d->jam_in > $d->jam_masuk ? 'Terlambat ' . hitungjamterlambatdesimal($d->jam_masuk, $d->jam_in) . ' Jam' : 'Tepat Waktu' }}</td>
+                    <td>
+                        @php
+                            function hitungTerlambat($jamMasuk, $jamIn) {
+                                $masuk = \Carbon\Carbon::parse($jamMasuk);
+                                $in = \Carbon\Carbon::parse($jamIn);
+                                if ($in->greaterThan($masuk)) {
+                                    $diff = $in->diff($masuk);
+                                    $output = 'Terlambat ';
+                                    $parts = [];
+                                    if ($diff->h > 0) {
+                                        $parts[] = $diff->h . ' jam';
+                                    }
+                                    if ($diff->i > 0) {
+                                        $parts[] = $diff->i . ' menit';
+                                    }
+                                    if ($diff->s > 0) {
+                                        $parts[] = $diff->s . ' detik';
+                                    }
+                                    return $output . implode(', ', $parts);
+                                }
+                                return 'Tepat Waktu';
+                            }
+                        @endphp
+                        {{ hitungTerlambat($d->jam_masuk, $d->jam_in) }}
+                    </td>
                 </tr>
             @endforeach
         </table>
 
         <table width="100%" style="margin-top:20px">
             <tr>
-                <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td>
-                <td><th>                <td colspan="2" style="text-align: left">
+                <td></td>
+                <td></td>
+                <td colspan="2" style="text-align: left">
                     Mengetahui,<br>
                     Kepala Sekolah<br><br><br><br>
-                    <u>JUARI, ST., S.Pd</u><br>
-                    NIP. 196506051989021004
-                </td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td> <td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
-                </td><td><th> <td></td> </th>
-                <th> <td></td> </th>
-                <th><td></td></th>
+                    <u>Halimahtussakdiah, S.Pd.</u><br>
+                    NIP. 197704272006042004
                 </td>
-               <td colspan="2" style="text-align: left">
+                <td></td>
+                <td></td>
+                <td colspan="2" style="text-align: left">
                     Langsa, {{ \Carbon\Carbon::now()->translatedFormat('d F Y') }}<br>
                     Pegawai<br><br><br><br>
                     <u>{{ $karyawan->nama_lengkap }}</u><br>

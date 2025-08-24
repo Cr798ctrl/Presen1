@@ -73,15 +73,15 @@ return false;
 
             <tr>
                 <td style="width: 30px">
-                    <img src="{{ asset('assets/img/OIP.jfif') }}" width="70" height="80" alt="">
+                    <img src="{{ asset('assets/img/logopresensi.png') }}" width="70" height="80" alt="">
                 </td>
                 <td>
                     <span id="title">
                         REKAP PRESENSI PEGAWAI<br>
                         PERIODE {{ strtoupper($namabulan[$bulan]) }} {{ $tahun }}<br>
-                        SMK NEGERI 2 LANGSA<br>
+                        SMK NEGERI 3 LANGSA<br>
                     </span>
-                    <span><i>Jl. A. Yani, Kecamatan Langsa Baro, Kota Langsa, Propinsi Aceh</i></span>
+                    <span><i>Jl. R.A. Kartini No. 9B, Paya Bujok Seuleumak, Kec. Langsa Baro, Kota Langsa, Provinsi Aceh</i></span>
                 </td>
             </tr>
         </table>
@@ -250,7 +250,7 @@ return false;
  <tr>
 <td></td>
 <td style="text-align: center">Langsa, {{ formatTanggalIndonesia(date('Y-m-d')) }}<br> <!-- Format date to dd mmmm yyyy -->
-Kepala SMKN 2 Langsa</td>
+Kepala SMKN 3 Langsa</td>
 </tr>
 <tr>
 <td style="text-align: left; vertical-align:bottom" height="100px">
@@ -258,8 +258,8 @@ Kepala SMKN 2 Langsa</td>
 
 </td>
 <td style="text-align: center; vertical-align:bottom">
-<b>Juari, ST., S.Pd</b><br>
-NIP. 196506051989021004
+<b>Halimahtussakdiah, S.Pd</b><br>
+NIP. 197704272006042004
 </td>
 </tr>
 </table>

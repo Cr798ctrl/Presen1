@@ -28,7 +28,7 @@
 
         <div class="login-card shadow-lg p-5 bg-light rounded-3 w-100" style="max-width: 400px;">
             <div class="text-center mb-4">
-                <img src="{{ asset('assets/img/login/login.webp') }}" alt="logo" class="mb-3" style="width: 80px; height: auto;">
+                <img src="{{ asset('assets/img/login/login.webp') }}" alt="logo" class="mb-3" style="width: 180px; height: auto;">
                 <h1 class="h2 fw-bold text-primary">E-Presensi</h1>
                 <p class="text-muted mt-2">Silakan Login untuk melanjutkan</p>
             </div>
